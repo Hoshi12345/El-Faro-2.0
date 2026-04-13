@@ -1,0 +1,620 @@
+/* el Faro Periodico*/
+
+/* Reset y configuracion Base */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Tipografia y fondo*/
+
+body {
+    font-family: 'Playfair Display', serif;/*cambio de fuente*/
+    background: #f5f5f5;/*fondo requerido*/
+    
+    
+}
+
+/* HEADER */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background: #4a90e2;
+    min-height: 90px;
+}
+
+.header-left {
+   flex: 1; 
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 60px;
+}
+#btn-login{
+  background-color: #333;
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+}
+#btn-login:hover{
+  background-color: cadetblue;
+}
+
+/*.wrapper {
+    position: relative;
+    width: 400px;
+    height: 440px;
+    background: transparent;
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20 px;
+    backdrop-filter: blur(20px);
+    box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+      transform: scale(0);
+   transition: transform .5s ease, height .2s ease;
+}
+.wrapper .active-popup {
+    transform: scale(1);
+}
+.wrapper .active{
+    height:520px;
+
+}
+.wrapper .form-box .login{
+    transition: trasform .18s ease;
+    transform: translateX(0);
+}
+.wrapper .active .form-box .login{
+    transition: none;
+    transform: translateX(-400px);
+}
+.wrapper .form-box login{
+    width: 100%;
+    padding: 40px;
+}
+.wrapper .icon-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 45px;
+    background: #162938;
+    font-size: 2em;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+    z-index: 1;
+}
+.form-box h2{
+    font-size: 2em;
+    color: #162938;
+    text-align: center;
+}
+.input-box{
+    position: relative;
+    width: 100%;
+    height: 50px;
+    border-bottom: 2px solid #162938;
+    margin: 30px 0;
+}
+.input-box label{
+    position: absolute;
+    top: 50%;
+    left: 5px;
+    transform: translateY(-50%);
+    font-size: 1em;
+    color: #162938;
+    font-weight: 500;
+    pointer-events: none;
+    transition: .5s;
+}
+.input-box input:focus~label,
+.input-box input:valid~label{
+    top: -5px;
+}
+.input-box input{
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    font-size: 1em;
+    color: #162938;
+    font-weight: 600;
+    padding: 0 35px 0 5px;
+}
+.input-box .icon{
+    position: absolute;
+    right: 8px;
+    font-size: 1.2em;
+    color: #162938;
+    line-height: 57px;
+
+}
+.remember-forgot {
+    font-size: 9em;
+    color: #162938;
+    font-weight: 500;
+    margin: -15px 0 15px;
+    display: flex;
+    justify-content: space-between;
+
+}
+.remember-forgot label input{
+    accent-color: #162938;
+    margin-right: 3px;
+}
+.remember-forgot a{
+    color: #162938;
+    text-decoration: none;
+}
+.remember-forgot a:hover{
+    text-decoration: underline;
+}*/
+.btn {
+    width: 100;
+    height: 45px;
+    background: #162938;
+    border: none;
+    outline: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1em;
+    color: #ffffff;
+    font-weight: 500;
+}
+/*.login-register {
+    font-size: .9em;
+    color: #162938;
+    text-align: center;
+    font-weight: 500;
+    margin: 25px 0 10px;
+}
+.login-register p a {
+    color:#162938;
+    text-decoration: none;
+    font-weight: 600;
+}
+.login-register p a:hover {
+    text-decoration: underline;
+} */
+
+header img {
+    width: 80px;
+    height: 80px;
+    background: #333;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+
+header h1 {
+    color: #000;
+    font-size: 24px;
+    margin: 0;
+}
+
+/* reloj */
+
+#reloj {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    font-weight: bold;
+    color: #000000;
+    background-color: #ffffff;
+    padding: 15px 35px;
+    border-radius: 50px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 140px;
+}
+
+/* NAV */
+nav {
+    background: #5ba3e8;
+    padding: 10px;
+   /* border-top: none;*/
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    gap: 10px;
+}
+
+nav li {
+    background: #4a90e2;
+    padding: 10px 30px;
+}
+
+nav a {
+    color: #000;
+    text-decoration:underline !important; /* subrayado base*/
+    font-weight:normal;
+    font-size: 14px;
+    transition: all 0.3s ease;/*transision para hover*/
+}
+
+nav a:hover{ /* Hover: con negrita y sin subrayado*/
+    font-weight:bolder;
+    text-decoration: none !important;
+}
+
+/* MAIN */
+main {
+    padding: 20px;
+    background: #d0d0d0;
+}
+.oculto {
+  display: none;
+}
+
+/* Opcional: Estilo básico para el formulario "flotante" */
+#miFormulario {
+  margin-top: 20px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  width: 300px;
+}
+
+
+/* SECTIONS */
+section {
+    margin-bottom: 20px;
+    padding: 15px;
+    
+}
+
+section h2 {
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #000;
+}
+
+/* SECCIÓN INICIO - Azul -con tablas html
+    background: #5ba3e8;
+}
+
+#inicio table {
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#inicio td {
+    background: #7bb3ed;
+    border: 2px solid #333;
+    padding: 15px;
+    width: 33%;
+    vertical-align: top;
+}*/
+/* -- Grid de articulos -*/
+
+.articles-grid {
+    display:grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columnas*/
+    gap:20px;
+}
+
+/* estilos de articulos*/
+
+article {
+
+    background-color: #ffffff !important;/* forzar blanco*/
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow:  0 2px 5px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+/* hover: fondo negro, letra blanca*/
+
+article:hover {
+
+    background-color: #000000 !important;
+    color: #ffffff;
+    cursor: pointer;
+}
+
+article:hover,
+article:hover *,
+article:hover *::before,
+article:hover *::after {
+    background-color: #000000 !important;
+    color: #ffffff !important;
+    border-color: #333333 !important;
+}
+
+
+/* seccion inicio*/
+
+#inicio article h3 {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+#inicio .noticia {
+    background: #ffffff;
+    padding: 10px;
+    border: 1px solid #333;
+    margin-top: 10px;
+}
+
+#inicio .noticia h4 {
+    text-align: center;
+    font-style: italic;
+    margin-top: 10px;
+}
+
+ /*Video y Audio - */
+.media {
+    margin-top: 15px;
+    display: flex;
+    gap: 10px;
+}
+
+video, audio {
+    width: 48%;
+    background: #a0a0a0;
+    border: 2px solid #333;
+}
+
+/* SECCIÓN DEPORTES - Gris */
+#deportes {
+   /* background: #a0a0a0;-eliminar color de seccion*/
+}
+
+/*#deportes table { - no usar tablas eliminar
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#deportes td { - no usar celdas
+    background: #c0c0c0;
+    border: 2px solid #333;
+    padding: 15px;
+    width: 33%;
+    vertical-align: top;
+} */
+
+#deportes article {
+    background: #ffffff;/* modificado a blanco*/
+    padding: 10px;
+}
+
+#deportes .resumen {
+    background: #ffffff;/* cambiado a blanco*/
+    padding: 15px;
+    border: 1px solid #333;
+    text-align: center;
+    margin-top: 10px;
+}
+
+/* SECCIÓN NEGOCIOS - Verde */
+#negocios {
+   /* background: #2e8b8b;- eliminar color */
+}
+
+/*#negocios table { -no usar tablas-
+    width: 100%;
+    border-spacing: 10px;
+}
+
+#negocios td { - no usar celdas-
+    background: #3ba3a3;
+    border: 2px solid #333;
+    padding: 15px;
+    display: block;
+    margin-bottom: 10px;
+}*/
+
+#negocios article {
+    display: block; /*cambio de flex a block para consistencia*/
+    background: #ffffff;
+    padding: 15px;
+   
+}
+
+#negocios article h3,
+#negocios article > p {
+    width: auto;    /* cambio de 150px a auto*/
+}
+
+#negocios .noticia {
+    background: #ffffff;/* modificado a blanco*/
+    padding: 15px;
+    border: 1px solid #333;
+    margin-top: 10px;
+}
+
+#negocios .noticia h4 {
+    font-style: italic;
+    margin-top: 10px;
+}
+
+/* FOOTER */
+footer {
+    background: #c9d2d0;/* modificado #333*/
+    color: #31231e;/* modificado de #white; */
+    text-align: center;
+    padding: 20px;
+}
+
+/* -- Responsividad--*/
+
+/* tablet 2 columnas */
+@media screen and (max-width:992px) {
+    .articles-grid{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* movil 1 columna*/
+@media screen and (max-width: 600px) {
+    .articles-grid {
+        grid-template-columns: 1fr; /* 1 columna*/
+    }
+
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .media {
+        flex-direction: column;
+    }
+
+    video, audio {
+        width:100%;
+    }
+}
+/* 
+   ESTILOS PARA FORMULARIOS Y CONTADORES
+   Actividad Semana 4
+    */
+
+/* Contador de artículos */
+.contador-articulos {
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 15px;
+    padding: 8px 15px;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    display: inline-block;
+}
+
+.contador-articulos span {
+    color: #4a90e2;
+    font-size: 1.2em;
+}
+
+/* Formulario de artículos */
+.formulario-articulos {
+    background: #ffffff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+#btnMostrarFormArticulo,
+#btnMostrarContacto {
+    background-color: #4a90e2;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+    margin-bottom: 15px;
+}
+
+#btnMostrarFormArticulo:hover,
+#btnMostrarContacto:hover {
+    background-color: #357abd;
+}
+
+/* Estilos generales para formularios */
+#formularioArticulo,
+#formularioContacto {
+    background: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-width: 600px;
+}
+
+#formularioArticulo h3 {
+    margin-bottom: 15px;
+    color: #333;
+}
+
+#formularioArticulo label,
+#formularioContacto label {
+    display: block;
+    margin-top: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+#formularioArticulo input,
+#formularioArticulo select,
+#formularioArticulo textarea,
+#formularioContacto input,
+#formularioContacto textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-family: 'Playfair Display', serif;
+    font-size: 14px;
+}
+
+#formularioArticulo textarea,
+#formularioContacto textarea {
+    resize: vertical;
+}
+
+#formularioArticulo button[type="submit"],
+#formularioContacto button[type="submit"] {
+    background-color: #2e8b8b;
+    color: white;
+    padding: 12px 30px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    transition: background-color 0.3s;
+}
+
+#formularioArticulo button[type="submit"]:hover,
+#formularioContacto button[type="submit"]:hover {
+    background-color: #236b6b;
+}
+
+/* Mensaje de confirmación */
+#mensajeConfirmacion {
+    color: #2e8b8b;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Clase oculto */
+.oculto {
+    display: none !important;
+}
+
+/* Sección de contacto */
+#contacto {
+    background: #d0d0d0;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 8px;
+}
+
+#contacto h2 {
+    margin-bottom: 15px;
+}

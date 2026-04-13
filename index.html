@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Periódico El Faro</title>
+    
+    <!-- agregando fuente desde google.fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet"> 
+    <link rel="stylesheet" href="Style.css">
+</head>
+<body>
+
+    <!-- HEADER solo contiene logo y h1 -->
+    <header>
+        <div class="header-left">
+             <img src="https://img.freepik.com/vector-premium/pintura-faro-cielo-azul-ola-fondo_646696-5260.jpg?semt=ais_incoming&w=740&q=80" alt="Logo El Faro">
+            
+             <h1>Bienvenidos a periodico el Faro</h1>
+              <!-- <div id="btn-login">Login</div> -->
+        </div>
+
+        <!-- reloj de javascript  actividad semana 4 -->
+         <div id="reloj">00:00:00</div>
+    </header>
+
+    <!-- NAV  -->
+    <nav>
+        <ul>
+            <li><a href="#inicio">INICIO</a></li>
+            <li><a href="#deportes">DEPORTES</a></li>
+            <li><a href="#negocios">NEGOCIOS</a></li>
+        </ul>
+    </nav>
+
+    <!-- MAIN contiene las 3 secciones -->
+    <main>
+        
+        <!-- FORMULARIO PARA AGREGAR ARTÍCULOS (Requerimiento 2) -->
+        <div class="formulario-articulos">
+            <button id="btnMostrarFormArticulo">➕ Agregar Nuevo Artículo</button>
+            
+            <form id="formularioArticulo" class="oculto">
+                <h3>Nuevo Artículo</h3>
+                
+                <label for="seccionArticulo">Sección:</label>
+                <select id="seccionArticulo" name="seccion" required>
+                    <option value="inicio">Inicio - Noticias Generales</option>
+                    <option value="deportes">Deportes</option>
+                    <option value="negocios">Negocios</option>
+                </select>
+                
+                <label for="tituloArticulo">Título del artículo:</label>
+                <input type="text" id="tituloArticulo" name="titulo" required>
+                
+                <label for="categoriaArticulo">Categoría:</label>
+                <input type="text" id="categoriaArticulo" name="categoria" required>
+                
+                <label for="descripcionArticulo">Descripción:</label>
+                <textarea id="descripcionArticulo" name="descripcion" rows="4" required></textarea>
+                
+                <label for="fuenteArticulo">Fuente (opcional):</label>
+                <input type="text" id="fuenteArticulo" name="fuente">
+                
+                <button type="submit">Publicar Artículo</button>
+            </form>
+        </div>
+
+        <!-- SECCIÓN INICIO -->
+        <section id="inicio">
+            <h2>Seccion Inicio - Noticias generales</h2>
+            <p class="contador-articulos">Cantidad de artículos: <span id="contador-inicio">0</span></p>
+            
+            <div class="articles-grid" id="grid-inicio">
+                <!-- Los artículos se cargarán dinámicamente aquí -->
+            </div>
+            
+            <!-- Video y Audio -->
+            <div class="media">
+                <video controls poster="https://www.mineduc.cl/wp-content/uploads/2024/03/liceo-maritimo-valparaiso.jpg">
+                    <source src="YTDown.com_YouTube_Media_WFmIBPs8hvY_002_360p.mp4" type="video/mp4">
+                    <p>Tu navegador no soporta video HTML5.</p>
+                </video>
+                <audio controls>
+                    <source src="tenkyu.mp3" type="audio/mpeg">
+                    <p>Tu navegador no soporta audio HTML5.</p>
+                </audio>
+            </div>
+        </section>
+
+        <!-- SECCIÓN DEPORTES -->
+        <section id="deportes">
+            <h2>Seccion Deportes</h2>
+            <p class="contador-articulos">Cantidad de artículos: <span id="contador-deportes">0</span></p>
+            
+            <div class="articles-grid" id="grid-deportes">
+                <!-- Los artículos se cargarán dinámicamente aquí -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN NEGOCIOS -->
+        <section id="negocios">
+            <h2>Seccion Negocios</h2>
+            <p class="contador-articulos">Cantidad de artículos: <span id="contador-negocios">0</span></p>
+            
+            <div class="articles-grid" id="grid-negocios">
+                <!-- Los artículos se cargarán dinámicamente aquí -->
+            </div>
+        </section>
+
+        <!-- FORMULARIO DE CONTACTO (Requerimiento 3) -->
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <button id="btnMostrarContacto">📧 Escribir Mensaje</button>
+            
+            <form id="formularioContacto" class="oculto">
+                <label for="nombreContacto">Nombre:</label>
+                <input type="text" id="nombreContacto" name="nombre" required>
+                
+                <label for="mensajeContacto">Mensaje:</label>
+                <textarea id="mensajeContacto" name="mensaje" rows="5" required></textarea>
+                
+                <button type="submit">Enviar Mensaje</button>
+                <p id="mensajeConfirmacion"></p>
+            </form>
+        </section>
+
+    </main>
+
+    <!-- FOOTER  -->
+    <footer>
+        <p>© 2026 El Faro - Todos los derechos reservados</p>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+
+</body>
+</html>
